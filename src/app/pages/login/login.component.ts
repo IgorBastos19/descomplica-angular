@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { AutorizacaoService } from '../../services/autorizacao.service';
 
 @Component({
   selector: 'app-login',
@@ -29,6 +30,8 @@ export class LoginComponent {
   });
 
   hasUnitNumber = false;
+
+  constructor(private AutorizacaoService: AutorizacaoService) {}
 
   onSubmit(): void {
     alert('Login successful!!');
