@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Igor Bastos",
+      "email": "igorcorreia.eng@gmail.com",
+      "phone": "5527999221167",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Thamyres Gianetti",
+      "email": "thamyresgianetti@gmail.com",
+      "phone": "5527998057973",
+      "password": "123456"
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-main',
@@ -23,6 +24,7 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     AsyncPipe,
     RouterModule,
+    HttpClientModule,
   ],
 })
 export class MainComponent {

@@ -1,0 +1,22 @@
+<p>manipulando-json works!</p>
+<div>
+  <h1>Lista de Estudantes</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Sexo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let students of students">
+        <td>{{ students.id }}</td>
+        <td>{{ students.name }}</td>
+        <td>{{ students.email }}</td>
+        <td>{{ students.gender }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
