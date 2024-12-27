@@ -1,7 +1,7 @@
 <p>manipulando-json works!</p>
-<div>
+<div class="container">
   <h1>Lista de Estudantes</h1>
-  <table>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th>ID</th>
@@ -16,6 +16,7 @@
         <td>{{ students.name }}</td>
         <td>{{ students.email }}</td>
         <td>{{ students.gender }}</td>
+        <td><button (click)="goToDetail(students)">Detalhe</button></td>
       </tr>
     </tbody>
   </table>

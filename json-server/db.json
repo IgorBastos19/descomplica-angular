@@ -2,17 +2,39 @@
   "users": [
     {
       "id": 1,
-      "name": "Igor Bastos",
-      "email": "igorcorreia.eng@gmail.com",
-      "phone": "5527999221167",
+      "name": "Gabriel Azevedo",
+      "email": "gabrielazevedo318@gmail.com",
+      "phone": "5547991899999",
       "password": "123456"
     },
     {
       "id": 2,
-      "name": "Thamyres Gianetti",
-      "email": "thamyresgianetti@gmail.com",
-      "phone": "5527998057973",
-      "password": "123456"
+      "name": "Marli Azevedo",
+      "email": "marliazevedo318@gmail.com",
+      "phone": "5547991898888",
+      "password": "123456789"
+    },
+    {
+      "id": 3,
+      "name": "teste",
+      "email": "teste@teste.com",
+      "phone": "6546546546",
+      "password": "1321244654"
+    },
+    {
+      "id": 4,
+      "name": "teste",
+      "email": "teste@teste.com",
+      "phone": "6546546546",
+      "password": "1321244654"
+    },
+    {
+      "id": 5,
+      "name": "teste",
+      "email": "gabriel@teste.com",
+      "phone": "teste",
+      "password": "12121212",
+      "dateBirth": "2023-09-29T03:00:00.000Z"
     }
   ]
 }

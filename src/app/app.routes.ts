@@ -10,6 +10,9 @@ import { Page1Component } from './pages/sub-route/page1/page1.component';
 import { Page2Component } from './pages/sub-route/page2/page2.component';
 import { PrivadoComponent } from './pages/privado/privado.component';
 import { autorizadoGuard } from './guards/autorizado.guard';
+import { DetalheComponent } from './pages/detalhe-component/detalhe-component.component';
+import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
+import { SegundalistaComponent } from './pages/segundalista/segundalista.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' }, // Redireciona para 'home'
@@ -18,6 +21,8 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent }, // Rota para 'login'
   { path: 'main', component: MainComponent }, // Rota para 'main'
   { path: 'cadastro', component: CadastroComponent }, // Rota para 'cadastro'
+  { path: 'lista-simples', component: ListaSimplesComponent },
+  { path: 'segundalista', component: SegundalistaComponent },
   { path: 'json', component: ManipulandoJsonComponent },
   {
     path: 'subroute',
@@ -27,12 +32,11 @@ export const routes: Routes = [
       { path: 'page2', component: Page2Component }, // Rota filha para 'subroute'
     ],
   },
+
   {
     path: 'privado',
     component: PrivadoComponent,
     canActivate: [autorizadoGuard],
   },
-
-  //sempre deixar por ultimo se tiver algo abaixo dele "some"
-  { path: '**', redirectTo: 'home' }, // Redireciona rotas inválidas para 'home'
+  { path: 'detalhe/:id/:phone', component: DetalheComponent },
 ];

@@ -3,24 +3,28 @@
     "id": 1,
     "name": "Gabriel",
     "email": "gabrielazevedo318@gmail.com",
-    "gender": "male"
+    "gender": "male",
+    "phone": "123"
   },
   {
     "id": 2,
     "name": "Isadora",
     "email": "isadoraazevedo318@gmail.com",
-    "gender": "female"
+    "gender": "female",
+    "phone": "123"
   },
   {
     "id": 3,
     "name": "Marli",
     "email": "marliazevedo318@gmail.com",
-    "gender": "female"
+    "gender": "female",
+    "phone": "123"
   },
   {
     "id": 4,
     "name": "Ivair",
     "email": "ivairazevedo318@gmail.com",
-    "gender": "male"
+    "gender": "male",
+    "phone": "123"
   }
 ]
