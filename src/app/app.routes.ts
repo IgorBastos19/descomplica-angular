@@ -30,7 +30,7 @@ export const routes: Routes = [
   {
     path: 'privado',
     component: PrivadoComponent,
-    canActivate: [autorizadoGuard], // Apenas autenticado pode acessar esta rota
+    canActivate: [autorizadoGuard],
   },
 
   //sempre deixar por ultimo se tiver algo abaixo dele "some"

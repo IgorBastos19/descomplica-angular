@@ -33,7 +33,14 @@ export class LoginComponent {
 
   constructor(private AutorizacaoService: AutorizacaoService) {}
 
+  loginClick() {
+    if (this.AutorizacaoService.obterLoginStatus())
+      this.AutorizacaoService.deslogar();
+    else this.AutorizacaoService.autorizar('token-example');
+  }
+
   onSubmit(): void {
+    this.loginClick();
     alert('Login successful!!');
   }
 }
