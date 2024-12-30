@@ -8,6 +8,8 @@ import {
 } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
+import { provideNgxMask } from 'ngx-mask';
+import { UserService } from './services/user.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,6 +17,8 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
     provideAnimationsAsync(),
-    provideHttpClient(), // Adiciona o HttpClient globalmente
+    provideHttpClient(), // Adiciona o HttpClient globalmente,
+    provideNgxMask(),
+    UserService,
   ],
 };

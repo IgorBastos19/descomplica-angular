@@ -12,7 +12,7 @@ import { PrivadoComponent } from './pages/privado/privado.component';
 import { autorizadoGuard } from './guards/autorizado.guard';
 import { DetalheComponent } from './pages/detalhe-component/detalhe-component.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
-import { SegundalistaComponent } from './pages/segundalista/segundalista.component';
+import { RevisarComponent } from './pages/revisar/revisar.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' }, // Redireciona para 'home'
@@ -21,8 +21,8 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent }, // Rota para 'login'
   { path: 'main', component: MainComponent }, // Rota para 'main'
   { path: 'cadastro', component: CadastroComponent }, // Rota para 'cadastro'
+  { path: 'revisar', component: RevisarComponent },
   { path: 'lista-simples', component: ListaSimplesComponent },
-  { path: 'segundalista', component: SegundalistaComponent },
   { path: 'json', component: ManipulandoJsonComponent },
   {
     path: 'subroute',

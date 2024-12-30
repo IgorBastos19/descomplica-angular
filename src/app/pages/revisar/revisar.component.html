@@ -7,25 +7,15 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <mat-label>Identity (CPF)</mat-label>
             <input
               matInput
               placeholder="Identity (CPF)"
               formControlName="identity"
-              type="text"
-              inputmode="numeric"
-              mask="000.000.000-00"
+              type="number"
             />
-            <mat-error
-              *ngIf="addressForm.controls['identity'].hasError('required')"
-            >
-              Identity is <strong>required</strong>
-            </mat-error>
-            <mat-error
-              *ngIf="addressForm.controls['identity'].getError('cpfNotValid')"
-            >
-              Identity is not <strong>valid</strong>
-            </mat-error>
+            @if (addressForm.controls['identity'].hasError('required')) {
+            <mat-error>Identity is <strong>required</strong></mat-error>
+            }
           </mat-form-field>
         </div>
       </div>
@@ -68,32 +58,12 @@
       </div>
       <div class="row">
         <div class="col">
-          <mat-form-field>
-            <mat-label>Choose a date</mat-label>
-            <input
-              matInput
-              [matDatepicker]="picker"
-              formControlName="nascimento"
-            />
-            <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle
-              matIconSuffix
-              [for]="picker"
-            ></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
           <mat-form-field class="full-width">
             <input
               matInput
               placeholder="Phone number"
               formControlName="phone"
               type="tel"
-              prefix="+55 "
-              mask="(00) 00000-0000"
             />
             @if (addressForm.controls['phone'].hasError('required')) {
             <mat-error>Phone number is <strong>required</strong></mat-error>

@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { AutorizacaoService } from '../../services/autorizacao.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ import { AutorizacaoService } from '../../services/autorizacao.service';
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule,
+    CommonModule,
   ],
 })
 export class LoginComponent {
@@ -42,5 +44,18 @@ export class LoginComponent {
   onSubmit(): void {
     this.loginClick();
     alert('Login successful!!');
+  }
+
+  email = this.addressForm.controls['email'];
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a <strong>validate</strong> email';
+    }
+
+    if (this.email.hasError('email')) {
+      return 'Not a valid email';
+    }
+
+    return '';
   }
 }

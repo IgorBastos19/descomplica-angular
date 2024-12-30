@@ -35,6 +35,20 @@
       "phone": "teste",
       "password": "12121212",
       "dateBirth": "2023-09-29T03:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "identity": "12912990769",
+      "password": "123@Teste",
+      "name": "Igor",
+      "lastName": "Bastos",
+      "phone": "27999221167",
+      "email": "igor@gmail.com",
+      "address": "Rua tres",
+      "address2": "",
+      "city": "Aimores",
+      "state": "MG",
+      "postalCode": 35200000
     }
   ]
 }

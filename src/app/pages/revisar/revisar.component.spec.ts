@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SegundalistaComponent } from './segundalista.component';
+import { RevisarComponent } from './revisar.component';
 
-describe('SegundalistaComponent', () => {
-  let component: SegundalistaComponent;
-  let fixture: ComponentFixture<SegundalistaComponent>;
+describe('RevisarComponent', () => {
+  let component: RevisarComponent;
+  let fixture: ComponentFixture<RevisarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SegundalistaComponent]
+      imports: [RevisarComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SegundalistaComponent);
+    fixture = TestBed.createComponent(RevisarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
