@@ -8,6 +8,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { AutorizacaoService } from '../../services/autorizacao.service';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -32,8 +34,11 @@ export class LoginComponent {
   });
 
   hasUnitNumber = false;
-
-  constructor(private AutorizacaoService: AutorizacaoService) {}
+  constructor(
+    private AutorizacaoService: AutorizacaoService,
+    private service: UserService,
+    private router: Router
+  ) {}
 
   loginClick() {
     if (this.AutorizacaoService.obterLoginStatus())
@@ -42,8 +47,22 @@ export class LoginComponent {
   }
 
   onSubmit(): void {
-    this.loginClick();
-    alert('Login successful!!');
+    if (this.AutorizacaoService.obterLoginStatus())
+      this.AutorizacaoService.deslogar();
+    //this.AutorizacaoService.autorizar('token-example');
+    else
+      this.service.login(this.addressForm.value).subscribe({
+        next: (response) => {
+          console.log(response.idToken);
+          if (response.idToken)
+            this.AutorizacaoService.autorizar(response.idToken);
+          this.router.navigate(['/usuario']);
+          alert('Login efetuado com sucesso');
+        },
+        error: (err) => {
+          console.error(err);
+        },
+      });
   }
 
   email = this.addressForm.controls['email'];

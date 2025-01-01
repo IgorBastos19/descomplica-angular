@@ -1,11 +1,11 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ListarComponent } from './listar.component';
+import { ListaTesteComponent } from './lista-teste.component';
 
-describe('ListarComponent', () => {
-  let component: ListarComponent;
-  let fixture: ComponentFixture<ListarComponent>;
+describe('ListaTesteComponent', () => {
+  let component: ListaTesteComponent;
+  let fixture: ComponentFixture<ListaTesteComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ describe('ListarComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListarComponent);
+    fixture = TestBed.createComponent(ListaTesteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

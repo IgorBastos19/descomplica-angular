@@ -13,6 +13,11 @@ import { autorizadoGuard } from './guards/autorizado.guard';
 import { DetalheComponent } from './pages/detalhe-component/detalhe-component.component';
 import { ListaSimplesComponent } from './pages/lista-simples/lista-simples.component';
 import { RevisarComponent } from './pages/revisar/revisar.component';
+import { ListaTesteComponent } from './pages/lista-teste/lista-teste.component';
+import { DashComponent } from './pages/dash/dash.component';
+import { TreeComponent } from './pages/tree/tree.component';
+import { DragComponent } from './pages/drag/drag.component';
+import { ModalComponent } from './pages/modal/modal.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' }, // Redireciona para 'home'
@@ -23,6 +28,12 @@ export const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent }, // Rota para 'cadastro'
   { path: 'revisar', component: RevisarComponent },
   { path: 'lista-simples', component: ListaSimplesComponent },
+  { path: 'lista-teste', component: ListaTesteComponent },
+  { path: 'dash', component: DashComponent },
+  { path: 'tree', component: TreeComponent },
+  { path: 'drag', component: DragComponent },
+  { path: 'modal', component: ModalComponent },
+
   { path: 'json', component: ManipulandoJsonComponent },
   {
     path: 'subroute',
